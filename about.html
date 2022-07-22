@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }  
+        .time{
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: flex-end;
+            margin: auto;  
+        } 
+        .time-firt{
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 10px; 
+            display: flex;
+            justify-content: flex-start;
+        }    
+        .time-firt h2{
+            font-size: 40px;
+            border-bottom: 2px solid black;
+        }
+        .time-title{
+            width: 100%;
+            font-size:35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: brown;
+            padding: 10px;
+            margin-bottom: 50px;
+        }
+        .time-title h1{
+            padding: 0 10px;
+            color: aliceblue;
+        }
+        .timeline-total{
+            width: 100%;
+            margin: auto;
+            padding-bottom: 100px;
+        }
+        .timeline-txt{
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-direction: column;
+            font-weight: 900;
+            padding: 30px 20px;
+        }
+        .timeline-txt:before{
+            content: "";
+            width: 250px;
+            height: 250px;
+            background-color: transparent;
+            position: absolute;
+            transform: rotate(45deg);
+            left: 850px;
+            border: 30px solid orange;
+            z-index: -1;
+            box-shadow: 30px -30px 0px 0px rgba(233, 175, 66, 0.657);
+        }
+        .timeline-txt p{
+            font-size: 70px;
+        }
+       
+        .timeline-total::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            clear: both;
+        }
+        .timeline{
+            padding: 50px 0;
+        }
+        .timeline li{
+            width: 50%;
+            box-sizing: border-box;
+            padding: 20px 0;
+            position: relative;
+            z-index: 5;
+        }
+        .timeline li:nth-child(odd){
+            float: left;
+            padding-right: 30px;
+        }
+        .timeline li:nth-child(odd)::after{
+            right: 10%;
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: rgb(128, 128, 128);
+            z-index: -1;
+        } 
+        .timeline li:nth-child(even){
+            float: right;
+            padding-left:30px;
+            transform: translateY(50%);
+        }
+        .timeline li::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: gray;
+            z-index: 2;
+        }
+        .timeline li:nth-child(odd):before{
+            right: 22px;
+        }
+        .timeline li:nth-child(even):before{
+            left: -40px;
+        }
+        .timeline h2{
+            color: black;
+        }
+        .timeline p{
+            color: gray;
+        }
+        .timeline a{
+            width: 200px;
+            text-decoration: none;
+            display: block;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 3px 5px 5px gray;
+            background-color: aliceblue;
+        }
+        .timeline a:hover{
+            background-color: skyblue;
+        }
+        .timeline a:hover h2,
+        .timeline a:hover p{
+            color:aliceblue;
+        }
+        .timeline li:last-child:after{
+            height: 50%;
+        }
+        .timeline  h2::after{
+            content: "";
+            position: absolute;
+            width: 65px;
+            height: 1px;
+            background-color: gray;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 0;
+
+        }
+        .timeline li:nth-child(even) h2:after{
+            right: 92%;
+        }
+        .timeline li:nth-child(odd) h2:after{
+            left: 68%;
+            width: 60px;
+        }
+        .line{
+            width: 150px;
+            height: 2px;
+            background-color: black;
+        }
+        /* =========================================關於我們 */
+        .brand{
+            width: 1200px;
+            margin: auto;
+            margin-top: 60px;
+            position: relative;
+        }
+        .brand-title{
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px;
+        }
+        .brand-title h2{
+            font-size: 40px;
+            border-bottom: 2px solid black;
+
+        }
+        .brand-pic{
+            width: 1200px;
+           
+
+        }
+        .brand-pic img{
+            width: 100%;
+            border-radius: 5px;
+        }
+        .brand-txt{
+            width: 1000px;
+            background-color: rgba(240, 248, 255, 0.637);
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .brand-post h3{
+            font-size: 25px;
+            padding: 10px;
+        }
+        .brand-post p{
+            font-size: 18px;
+            line-height: 2;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <section class="timeline-total">
+        <div class="time-title">
+                <h1>關於我們</h1>
+        </div>
+        <div class="time-firt">
+            <h2>巨猩大事記</h2>
+        </div>
+        <div class="time">
+            <div class="time-tree">
+                <ul class="timeline">
+                    <li>
+                        <a href="#">   
+                            <h2>2017年6月</h2>
+                            <p>巨猩體能工作室開幕</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">   
+                            <h2>2018年3月</h2>
+                            <p>與竹圍高中橄欖球隊合作</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">  
+                            <h2>2018年7月</h2>
+                            <p>得到google五星最佳評論</p>
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="#">  
+                            <h2>2019年10月</h2>
+                            <p>獨步引進TDXE專業器材</p>
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="#">  
+                            <h2>2021年3月</h2>
+                            <p>獲選桃園市最佳健身房</p>
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="#">  
+                            <h2>2022年6月</h2>
+                            <p>獲選最有風格健身房</p>
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+            <div class="timeline-txt">
+                <p>GORILLA</p>
+                <p>TRANING</p>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ==============================時間軸 -->
+    <section class="brand-concept">
+        <div class="brand">
+            <div class="brand-title">
+                <h2>創立宗旨</h2>
+            </div>
+            <div class="brand-pic">
+                <img src="https://www.monkeytraining.com.tw/uploads/use/1920_0/20200218174547d430.jpg">
+            </div>
+            <div class="brand-txt">
+                <div class="brand-post">
+                <h3>品牌理念</h3>
+                    <p>一群志同道合的團隊，憑著敢衝、敢做、敢拚且永不放棄的心，猴子體能訓練就此誕生。透過我們的訓練讓您的身體有如猴子一般輕盈靈巧、反應快速，我們致力於將正確的觀念交給大眾，不是盲目的餵人吃魚，而是教會大眾如何釣魚，希望透過巨猩的高專業訓練讓身體一步步邁向更健康的指標。</p>
+                </div>
+                <div class="brand-post">
+                <h3>訓練理念</h3>
+                     <p>巨猩是由一群培育多年的精實教練團隊，透過巨猩的訓練讓身體重建並達到最佳的動作模式，以達成動作的最佳效率，產生最大化的力量。而足夠的動作控制與動作弧度達到最合適的狀態，最終讓您會像猴子般輕盈靈巧、反應快速。訓練後再加上運動恢復、運動營養與物理治療結合一連串的專業化分工搭配，享有全方位的照顧，巨猩在乎的不只是體態好不好看，更在乎的是身體是否好動好用。希望透過猴子體能訓練，幫助您擁有精壯的好體態之外，更能讓您到中老年後都能自由自在的活動。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

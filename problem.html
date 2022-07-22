@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .menu{
+        width: 100%;
+        display: flex;
+        background-color: #FABB1A;
+        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 8;  
+    }
+    .nav{
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; 
+    }
+    .nav li a{
+        width: 120px;
+        padding: 10px;
+        text-decoration: none;
+        color: aliceblue;
+        font-size: 20px;
+        display: block;
+        font-weight: 900;
+        
+    }
+
+    .nav li{
+        position: relative;
+    }
+    .nav li:hover >a{
+        background-color: rgb(140, 14, 14);
+    }
+    .nav .information{
+        width: 140px;
+        position: absolute;
+        top: 100%;
+        background-color: #090909;
+        display: none;
+        text-align: center; 
+        
+    }
+    .nav li:hover .information{
+        display: block;
+    }
+    .information li a{
+        display: block; 
+    
+    }
+    .nav .coach{
+        width: 140px;
+        position: absolute;
+        top: 100%;
+        background-color: #090909;
+        display: none;
+        
+    }
+    .nav li:hover .coach{
+        display: block;
+    }
+    .nav .article{
+        width: 140px;
+        position: absolute;
+        top: 100%;
+        background-color: #090909;
+        display: none;
+        
+    }
+    .nav li:hover .article{
+        display: block;
+    }
+    .nav .free{
+        width: 140px;
+        position: absolute;
+        top: 100%;
+        background-color: #090909;
+        display: none;
+        
+    }
+    .nav li:hover .free{
+        display: block;
+    }
+    .nav .connection{
+        width: 140px;
+        position: absolute;
+        top: 100%;
+        background-color: #090909;
+        display: none;
+        
+    }
+    .nav li:hover .connection{
+        display: block;
+    }
+    .logo-pic{
+        text-align: center;
+        width: 160px;
+        height: 110px;
+        background-color: rgb(238, 238, 238);
+        position: absolute;
+        top: 0;
+        right: 80%;
+        z-index: 10;
+        position: fixed;
+        
+        
+    }
+    .logo-pic img{
+        padding-bottom: 20px;
+    }
+    .logo-pic::before{
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom:30px solid transparent;
+        border-right: 80px solid rgb(238, 238, 238);
+        border-left:80px solid rgb(238, 238, 238);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+    } 
+
+ /* <!-- ========================================選單 --> */
+        .problem-total{
+            padding-top:45px
+        }
+        .problem-title{
+        box-sizing: border-box;
+        width: 100%;
+        background-color: brown;
+        margin: auto;
+        color: aliceblue;
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        }
+        .problem{
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .problem-item{
+            margin-bottom: 30px;
+        }
+        .problem-question{
+            width: 100%;
+            max-width: 1200px;
+            background-color: orange;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .problem-answer{
+            font-size: 18px;
+            opacity: 0;
+        }
+    /* =============================常見問題 */
+        .manufacturer-title{
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .manufacturer-title h2{
+            font-size: 40px;
+            border-bottom: 3px solid black;
+        }
+        .manufacturer{
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+
+        }
+        .manufacturer-pic img{
+            width: 100%;
+            margin: 10px;
+
+           
+        }
+
+    /* =============================特約廠商 */ 
+       
+        .contact-container{
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            padding-right: 50px;
+        }
+        .contact-title{
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            box-sizing: border-box;
+            padding-bottom: 20px;
+          
+        }
+        .contact-title h2{
+            border-bottom: 2px solid black;
+            font-size: 40px;
+           
+        }
+        .contact-txt{
+            padding: 0 50px;
+        }
+        .contact-first{
+            display: flex;
+        }
+        .contact-first h2{
+            font-size: 40px;
+          
+        }
+        .contact-post p{
+            font-size: 20px;
+            line-height: 2;
+        }
+  /* =============================聯絡我們 */
+ .footer-total{
+    display: flex;
+    background-color: black;
+    margin-top: 30px;
+}
+.footer{
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color: aliceblue;
+    padding: 20px;
+    margin: auto;
+}
+.footer .footer-pic{
+    display: flex;
+    justify-content: flex-start;
+    width: 300px;
+}
+.footer .footer-pic img{
+    width: 300px;
+}
+.footer .footer-about{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+}
+.footer-about ul{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.footer-about li{
+    display: inline-block;
+    margin: 10px 0;
+}
+.footer-about ul{
+    text-align: center;
+}
+.footer-about ul p{
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px;
+    margin: 10px;
+}
+.footer-about ul a{
+    text-decoration: none;
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+.footer-about ul a:hover{
+    color: red;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color:#FABB1A; 
+    flex-direction: column;
+    padding-top: 20px;
+}
+/* <!-- ========================================關於我們 -->  */
+.app{
+    border-top: 2px solid white;
+    background-color: black;
+}
+.app-pic img{
+    margin: 5px 10px;
+}
+.app-adress{
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+/* <!-- ========================================連結 -->  */
+
+.copy{
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 80px 0;
+    color: aliceblue;  
+    font-size: 20px;
+}
+/* ========================================copy-rigtt -->    */
+.advertise{
+    width: 40px;
+    /* background-color: black; */
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 10;
+    padding: 10px 5px;
+    
+}
+.advertise img{
+   margin: 10px 0;  
+}
+/* <!-- 
+========================================ig fb line -->  */
+        
+   
+    </style>
+</head>
+<body>
+    <section class="menu-total">
+        <div class="menu">
+          <ul class="nav">
+            <li><a href="#">關於我們</a></li>
+            <li  class="new"><a href="#">最新消息</a>
+            <ul class="information">
+              <li><a href="new.html">購課優惠</a></li>
+              <li><a href="new.html">最新活動</a></li>
+              <li><a href="new.html">挑戰活動</a></li>
+            </ul></li>
+            <li><a href="#">私人教練</a>
+            <ul class="coach">
+              <li><a href="#">課程介紹</a></li>
+              <li><a href="#">會員成果</a></li>
+              <li><a href="coach.html">教練介紹</a></li>
+            </ul></li>
+            <li><a href="#">場館介紹</a>
+            <ul class="article">
+              <li><a href="venue.html">自由重量區</a></li>
+              <li><a href="venue.html">機械式訓練區</a></li>
+              <li><a href="venue.html">有氧教室</a></li>
+              <li><a href="venue.html">瑜珈教室</a></li>
+            </ul></li>
+            <li><a href="#">免費體驗</a>
+            <ul class="free">
+              <li><a href="free.html">馬上體驗</a></li>
+              <li><a href="#">了解內容</a></li>
+            </ul></li>
+            <li><a href="#">聯絡我們</a>
+            <ul class="connection">
+              <li><a href="#">聯絡資訊</a></li>
+              <li><a href="#">合作廠商</a></li>
+              <li><a href="#">常見問題</a></li>
+            </ul></li>
+            <li><a href="#">TDEE計算機</a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- ========================================選單 -->
+      
+      <div class="logo">
+        <div class="logo-pic">
+        <a href="首頁複製.html"><img src="照片/商標100.png" alt="" width="150" height="130"></a>
+        </div>
+      </div>
+      <!-- ========================================logo -->
+    
+    
+    <section class="problem-total">
+        <div class="problem-title">
+            <h1>常見問題</h1>
+        </div>
+        <div class="problem">
+            <div class="problem-item">
+                <div class="problem-question problem-question-1">
+                    <h3><strong>Q</strong>
+                        我們是怎麼收費的？</h3>
+                </div>
+                <div class="problem-answer problem-answer-1">
+                    <p>我們有會籍制每月699，私人教練課體驗價500元</p>
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-question problem-question-2">
+                    <h3><strong>Q</strong>
+                        我們有賣單次入場嗎？</h3>
+                </div>
+                <div class="problem-answer problem-answer-2">
+                    <p>尖峰時段自主訓練 250/次，離峰時段自主訓練 200/次。請先下載超核心專屬APP，綁定信用卡扣款。</p>
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-question problem-question-3">
+                    <h3><strong>Q</strong>
+                        我要怎麼訂閱？</h3>
+                </div>
+                <div class="problem-answer problem-answer-3">
+                    <p>首先你必須先下載我們的 App，接著參照以下訂閱流程教學就可以完成訂閱囉！
+                        觀看訂閱教學</p>
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-question problem-question-4">
+                    <h3><strong>Q</strong>
+                        我們的會籍有限制使用時段嗎？</h3>
+                </div>
+                <div class="problem-answer problem-answer-4">
+                    <p>金卡：無使用時段限制
+                        銀卡：週一至週五 18:00~22:00、週六至週日 13:00~17:00 無法入場使用，不分連續假日或補班日。</p>
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-question problem-question-5">
+                    <h3><strong>Q</strong>可以多人共用一個會籍嗎？</h3>
+                </div>
+                <div class="problem-answer problem-answer-5">
+                    <p>每個會籍為電話綁定，並且會上傳證件及大頭照作為個人會籍使用，因此不能與他人共用會籍。</p>
+                </div>
+            </div>
+            <div class="problem-item">
+                <div class="problem-question problem-question-6">
+                    <h3><strong>Q</strong>
+                        訂閱之後還能更改方案嗎？</h3>
+                </div>
+                <div class="problem-answer problem-answer-6">
+                    <p>可以，如欲更改請直接按「取消訂閱」，接著再重新訂閱你要的方案即可。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /* =============================常見問題 */ -->
+    <section  class="manufacturer-total">
+        <div class="manufacturer-title">
+            <h2>合作廠商</h2>
+        </div>
+        <div class="manufacturer">
+           
+                <img src="照片/合作1.PNG" alt="" width="220">
+                <img src="照片/合作2.PNG" alt=""  width="220">
+                <img src="照片/合作3.PNG" alt=""  width="220">
+                <img src="照片/合作4.PNG" alt=""  width="220">
+                <img src="照片/合作5.PNG" alt="" width="220">
+                <img src="照片/合作6.PNG" alt=""  width="220"> 
+                <img src="照片/合作7.PNG" alt=""  width="220">
+                <img src="照片/合作8.PNG" alt=""  width="220">
+                <img src="照片/合作9.PNG" alt=""  width="220">
+                <img src="照片/合作10.PNG" alt=""  width="220">
+        
+        </div>
+    </section>
+  
+
+     <!-- /* =============================特約廠商 */ -->
+ 
+
+    <section class="contact-total">
+        <div class="contact-title">
+            <h2>聯絡我們</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14456.957762496408!2d121.5329504!3d25.0598724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9db72bc4cb680831!2zTW9ua2V5IFRyYWluaW5nIOeMtOWtkOmrlOiDveiok-e3tA!5e0!3m2!1szh-TW!2stw!4v1657717479590!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contact-txt">
+                <div class="contact-first">
+                    <h2>交通位置</h2>
+                      <img src="placeholder.png" alt=""width=50 height="50" >
+                  </div>
+                  <div class="contact-post">
+                    <p>台北市中山區松江路276號6樓</p>
+                    <p>營業時間：</p>
+                    <p>星期一	09:00–22:00</p>
+                    <p>星期二	09:00–22:00</p>
+                    <p>星期三	09:00–22:00</p>
+                    <p>星期四	09:00–22:00</p> 
+                    <p>星期五	09:00–22:00</p>
+                    <p>星期六	09:00–20:00</p> 
+                    <p>星期日	09:00–20:00</p>
+                   
+                  </div>
+            </div>
+        </div>
+    </section>
+ <!-- /* =============================聯絡我們 */ -->
+     
+<section class="footer-total">
+    <div class="footer">
+      <div class="footer-pic">
+        <img src="照片/商標100.png" alt="" width="350">
+      </div>
+      <div class="footer-about">
+        <nav>
+          <ul>
+            <li><p>關於我們</p></li>
+            <li> <a href="#">創立宗旨</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><p>最新消息</p></li>
+            <li> <a href="#">活動優惠</a></li>
+            <li> <a href="#">媒體報導</a></li>
+            <li> <a href="#">活動花絮</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><p>私人教練</p></li>
+            <li> <a href="#">教練課程介紹</a></li>
+            <li> <a href="#">會員成果</a></li>
+            <li> <a href="#">最新器材</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><p>專業文章</p></li>
+            <li> <a href="#">飲食研究</a></li>
+            <li> <a href="#">健身常識</a></li>
+            <li> <a href="#">心肺研究</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><p>免費體驗</p></li>
+            <li> <a href="#">馬上體驗</a></li>
+            <li> <a href="#">了解內容</a></li>
+            <li> <a href="#">會員須知</a></li>
+            <li> <a href="#">企業方案</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><p>聯絡我們</p></li>
+            <li> <a href="#">聯絡資訊</a></li>
+            <li> <a href="#">特約廠商</a></li>
+            <li> <a href="#">常見問題</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><p>TDEE計算機</p></li>
+            <li> <a href="#">計算TDEE</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+   </section>
+    <!-- ========================================關於我們 --> 
+    <div class="app">
+      <div class="app-adress">
+        <p>桃園市桃園區力行路622號</p>
+      </div>
+        <div class="app-pic">
+        <img src="照片/instagram.png" alt="" width="30" height="30">
+        <img src="照片/facebook.png" alt="" width="30" height="30">
+        <img src="照片/line.png" alt="" width="30" height="30">
+        </div>
+       <!-- ========================================連結 -->   
+    </div>
+   <div class="copy">
+    <p>Copyright ©2022 巨星體能工作室</p>
+  </div>
+     <!-- ========================================copy-rigtt -->   
+  <div class="advertise">
+    <img src="照片/101.png" alt="" width="30" height="30">
+    <img src="照片/100.png" alt="" width="30" height="30">
+    <img src="照片/102.png" alt="" width="30" height="30">
+  </div>
+  <!-- 
+  ========================================ig fb line --> 
+    
+
+
+    
+<script src ="jquery-3.6.0.min.js"></script>
+<script>
+
+    var question = document.getElementsByClassName("problem-question");
+    var answer = document.getElementsByClassName("problem-answer");
+
+    for(let i=0;i<question.length;i++){
+        question[i].onclick = function(){
+            for(let j=0;j<answer.length;j++){
+                if(i != j){
+                    answer[j].style.opacity=0;
+                }
+            }
+            if(answer[i].style.opacity==1){
+                answer[i].style.opacity=0;
+            }
+            else{//0
+                answer[i].style.opacity=1;
+            }
+        
+        }
+    }
+
+//     $(".problem-answer").hide();
+
+//     $(".problem-question-1").click(function(){
+//         $(".problem-answer-1").toggle();
+//     })
+
+  
+
+// $(".problem-question-2").click(function(){
+//     $(".problem-answer-2").toggle();
+// })
+
+
+// $(".problem-question-3").click(function(){
+//     $(".problem-answer-3").toggle();
+// })
+
+// $(".problem-question-4").click(function(){
+//     $(".problem-answer-4").toggle();
+// })
+
+// $(".problem-question-5").click(function(){
+//     $(".problem-answer-5").toggle();
+// })
+
+// $(".problem-question-6").click(function(){
+//     $(".problem-answer-6").toggle();
+// })
+
+
+</script>
+
+</body>
+</html>

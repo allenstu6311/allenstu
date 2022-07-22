@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .banner{
+            height: 80vh;
+            background: url("https://picsum.photos/1200/700/?random=10")center top/cover;
+        }
+   
+        .new-total{
+            position: relative;
+        }
+        .new-total::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: white;
+            top: 0;
+            left: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            box-shadow: 
+            200px 30px 0px 23px white,
+            350px 27px 0px 0px white,
+            600px 15px 0px 0px white,
+            450px 44px 0px 14px white,
+            780px 20px 0px 0px white,
+            850px 31px 0px 40px white,
+            1100px 31px 0px 0px white,
+
+            -200px 45px 0px 0px white,
+            -350px 27px 0px 0px white,
+            -550px 0px 0px 25px white,
+            -600px 15px 0px 0px white,
+            -450px 22px 0px 0px white,
+            -780px 30px 0px 20px white,
+            -850px 15px 0px 0px white,
+            -1100px 0px 0px 30px white,
+
+            200px -30px 0px 23px rgba(0, 0, 0, 0.6),
+            -20px  -30px 0px 0px rgba(0, 0, 0, 0.6),    
+            350px -27px 0px 0px rgba(0, 0, 0, 0.6),
+            600px -15px 0px 0px rgba(0, 0, 0, 0.6),
+            450px -44px 0px 14px rgba(0, 0, 0, 0.6),
+            780px -20px 0px 0px rgba(0, 0, 0, 0.6),
+            850px -31px 0px 40px rgba(0, 0, 0, 0.6),
+            1100px -31px 0px 0px rgba(0, 0, 0, 0.6),
+
+            -200px -24px 0px 0px rgba(0, 0, 0, 0.6),
+            -350px -27px 0px 0px rgba(0, 0, 0, 0.6),
+            -550px -0px  0px 25px rgba(0, 0, 0, 0.6),
+            -600px -53px 0px 0px rgba(0, 0, 0, 0.6),
+            -450px -52px 0px 0px rgba(0, 0, 0, 0.6),
+            -780px -50px 0px 20px rgba(0, 0, 0, 0.6),
+            -850px -30px 0px 0px rgba(0, 0, 0, 0.6),
+            -1100px -0px 0px 30px rgba(0, 0, 0, 0.6);
+        }
+        .new-total::before{
+            content: "";
+            width: 100%;
+            height: 40px;
+            
+            background-color: white;
+            position: absolute;
+            top:0px;
+            left: 0;
+            z-index: 3;
+        }
+
+
+   /* ==================================封面      */
+
+        .new-title{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            z-index: 5;
+            position: relative;
+            padding-top:100px ;
+            margin-bottom: 80px;
+            
+        }
+        .new-title h1{
+            font-size: 50px;
+            z-index: 5;
+            position: relative;
+            padding: 0 10px;
+        }
+        .new{
+            width: 1200px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            align-items: center ;
+            box-sizing: border-box;
+           
+        }
+        .new-card{
+            width: 300px;
+            display: flex;
+            margin: 20px;
+            margin: 10px;
+            background-color: white;
+            /* border: 1px solid black; */
+            position: relative;
+            border: 1px solid black;
+        }
+        /* .new-pic{
+            width:200px;
+            margin: 10px;
+            padding: 10px;
+            z-index: 5;
+        } */
+        .new-pic img{
+            width: 50%;
+          
+            vertical-align: middle;
+        }
+        .new-txt .new-btn{
+            width:  100px;
+            display: flex;
+            background-color: red; 
+            padding: 10px;
+            text-align: center;
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .new-txt .new-btn::before{
+            content: "";
+            width: 0;
+            height: 0;
+            border-right: 20px solid aliceblue;
+            border-top: 42px solid transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .new-txt .new-btn::after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 20px solid aliceblue;
+            border-bottom: 42px solid transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .new-txt .new-btn a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .new-card .new-txt{
+            width: 50%;
+            
+            z-index: 5;
+        }
+        .new-head{
+            display: flex;
+        }
+        .new-body{
+            display: flex;
+        }
+        .new-foot{
+            display: flex;
+        }
+     
+        .new-sale{
+            width: 800px;
+            display: flex;
+            justify-content: flex-start;
+            padding: 20px 0;
+        }
+        .new-sale h2{
+            border-bottom: 3px solid black;
+            color: black;
+            font-size: 40px;
+        }
+        .line{
+            width: 130px;
+            height: 3px;
+            background-color: black;
+        }
+        .new-character{
+            font-size: 100px;
+            position: absolute;
+            top:100px;
+            left: 60%;
+            transform: rotate(25deg);
+         
+        }
+        .new-character p{
+            color: white;
+            z-index: 1;
+            text-shadow: 6px 6px   rgba(128, 128, 128, 0.534) ;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <section class="new-total">
+    </section>
+    
+   <!-- /* ==================================封面      */ -->
+    <div class="new-total">
+            <div class="new-title">
+                <div class="line"></div>
+                <h1>最新消息</h1>
+            <div class="line"></div>
+        </div>
+        <div class="new">
+          
+            <div class="new-head">
+                <div class="new-sale">
+                    <h2>最新活動</h2>
+                    </div>
+                <div class="new-card">
+                    <div class="new-pic">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="new-txt">
+                        <h2>入會費0元</h2>
+                        <ul>
+                            <li>8月前加入巨猩體能工作室，面入會費喔~</li>
+                        </ul>
+                        <div class="new-btn">
+                            <a href="#">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-card">
+                    <div class="new-pic">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="new-txt">
+                        <h2>完課獎勵</h2>
+                        <ul>
+                            <li>完課3堂-即贈「果⼒醒PASSION 24」1瓶(限量10,000組)</li>
+                            <li>完課6堂-即贈WG專屬運動襪乙雙(限量5,000組)</li>
+                    </ul>
+                        <div class="new-btn">
+                            <a href="#">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-card">
+                    <div class="new-pic">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="new-txt">
+                        <h2>運動就是免疫力!前30天免費運動</h2>
+                        <ul>
+                            <li>首次運動免費,時效30天!
+                                點選下方連結領取優惠!我們不"健"不散</li>
+                        </ul>
+                        <div class="new-btn">
+                            <a href="#">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-card">
+                    <div class="new-pic">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="new-txt">
+                        <h2>
+                            APP進場 週週抽現金</h2>
+                        <ul>
+                            <li>贈品以實體為準，尺寸及顏色不可指定。</li>
+                            <li>每人每週僅有一次得獎資格。</li>
+                          
+                        </ul>
+                        <div class="new-btn">
+                            <a href="#">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+             <div class="new-body">
+                <div class="new-sale">
+                    <h2>購課優惠</h2>
+                </div>
+                    <div class="new-card">
+                    <div class="new-pic">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="new-txt">
+                        <h2>滿36堂再送4堂</h2>
+                        <ul>
+                            <li>購買36堂課程老闆給力再送你4堂!</li>
+                        </ul>
+                        <div class="new-btn">
+                            <a href="#">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-card">
+                    <div class="new-pic">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="new-txt">
+                        <h2>父親節團課點數大放送</h2>
+                        <ul>
+                            <li>購買120點再送20點，買越多送越多</li>
+                            <li>爸爸身分免費體驗團課乙堂</li>
+                        </ul>
+                        <div class="new-btn">
+                            <a href="#">了解更多</a>
+                        </div>
+                    </div>
+                    <div class="new-character">
+                        <p>超優惠</p>
+                    </div>
+                </div>
+                <div class="new-card">
+                    <div class="new-pic">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="new-txt">
+                        <h2>老闆又要送課啦</h2>
+                        <ul>
+                            <li>帶朋友來體驗，購課後加送乙堂課程</li>
+                        </ul>
+                        <div class="new-btn">
+                            <a href="#">了解更多</a>
+                        </div>
+                    </div>
+                    <div class="new-character">
+                        <p>超優惠</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new-foot">
+
+                <div class="new-sale">
+                    <h2>挑戰活動</h2>
+                </div>    
+                <div class="new-card">
+                    <div class="new-pic">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="new-txt">
+                        <h2>減酯大賽</h2>
+                        <ul>
+                            <li>即日起三十天減掉最脂肪者</li>
+                            <li>每周固定進入健身房三次以上</li>
+                            <li>第一名者即可獲得一萬元獎金</li>
+                        </ul>
+                        <div class="new-btn">
+                            <a href="#">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-card">
+                    <div class="new-pic">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="new-txt">
+                        <h2>全勤獎</h2>
+                        <ul>
+                            <li>購買會籍滿一年者</li>
+                            <li>每周固定上健身房三次以上</li>
+                            <li>免費贈送1個月會籍</li>
+                        </ul>
+                        <div class="new-btn">
+                            <a href="#">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

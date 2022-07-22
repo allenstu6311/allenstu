@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .menu{
+    width: 100%;
+    display: flex;
+    background-color: #FABB1A;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;  
+}
+.nav{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+}
+.nav li a{
+    width: 120px;
+    padding: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    display: block;
+    font-weight: 900;
+    
+}
+
+.nav li{
+    position: relative;
+}
+.nav li:hover >a{
+    background-color: rgb(140, 14, 14);
+}
+.nav .information{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    text-align: center; 
+    
+}
+.nav li:hover .information{
+    display: block;
+}
+.information li a{
+    display: block; 
+ 
+}
+.nav .coach{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    
+}
+.nav li:hover .coach{
+    display: block;
+}
+.nav .article{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    
+}
+.nav li:hover .article{
+    display: block;
+}
+.nav .free{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    
+}
+.nav li:hover .free{
+    display: block;
+}
+.nav .connection{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    
+}
+.nav li:hover .connection{
+    display: block;
+}
+.logo-pic{
+    text-align: center;
+    width: 160px;
+    height: 110px;
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    top: 0;
+    right: 80%;
+    z-index: 10;
+    position: fixed;
+    
+    
+}
+.logo-pic img{
+    padding-bottom: 20px;
+}
+.logo-pic::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom:30px solid transparent;
+    border-right: 80px solid rgb(238, 238, 238);
+    border-left:80px solid rgb(238, 238, 238);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+} 
+
+ /* <!-- ========================================選單 --> */
+
+    </style>
+</head>
+<body>
+
+    <section class="menu-total">
+        <div class="menu">
+          <ul class="nav">
+            <li><a href="#">關於我們</a></li>
+            <li  class="new"><a href="#">最新消息</a>
+            <ul class="information">
+              <li><a href="new.html">購課優惠</a></li>
+              <li><a href="new.html">最新活動</a></li>
+              <li><a href="new.html">挑戰活動</a></li>
+            </ul></li>
+            <li><a href="#">私人教練</a>
+            <ul class="coach">
+              <li><a href="#">課程介紹</a></li>
+              <li><a href="#">會員成果</a></li>
+              <li><a href="coach.html">專業團隊</a></li>
+            </ul></li>
+            <li><a href="#">場館介紹</a>
+            <ul class="article">
+              <li><a href="venue.html">自由重量區</a></li>
+              <li><a href="venue.html">機械式訓練區</a></li>
+              <li><a href="venue.html">有氧教室</a></li>
+              <li><a href="venue.html">瑜珈教室</a></li>
+            </ul></li>
+            <li><a href="#">免費體驗</a>
+            <ul class="free">
+              <li><a href="free.html">馬上體驗</a></li>
+              <li><a href="#">了解內容</a></li>
+            </ul></li>
+            <li><a href="#">聯絡我們</a>
+            <ul class="connection">
+              <li><a href="#">聯絡資訊</a></li>
+              <li><a href="#">合作廠商</a></li>
+              <li><a href="#">常見問題</a></li>
+            </ul></li>
+            <li><a href="#">TDEE計算機</a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- ========================================選單 -->
+      
+      <div class="logo">
+        <div class="logo-pic">
+        <a href="首頁複製.html"><img src="照片/商標100.png" alt="" width="150" height="130"></a>
+        </div>
+      </div>
+      <!-- ========================================logo -->
+    
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{  
+            padding: 0;
+            margin: 0;
+         }
+.student-total{
+    margin-bottom: 400px;
+    
+}
+.student{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+}
+.student-item{
+    width: 600px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.student-pic{
+    width: 500px;
+}
+.student-item img{
+    width: 100%;
+}
+.student-pic{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.student-txt{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#next-1,#next-2,#next-3{
+ 
+}
+.order{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+}
+.order label{
+  
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 0 5px;
+    display: inline-block;
+}
+.student-pic-2{
+    left: 100%;
+}
+.student-pic-3{
+    left: 200%;
+}
+.student-item input[type="radio"]:nth-of-type(1):checked~.student-pic-1:nth-of-type(1){
+    transform: translateX(0);
+}
+.student-item input[type="radio"]:nth-of-type(2):checked~.student-pic-2:nth-of-type(2){
+    transform: translateX(-100%);
+}
+.student-item input[type="radio"]:nth-of-type(3):checked~.student-pic-3:nth-of-type(3){
+    transform: translateX(-200%);
+}
+         
+
+    
+    </style>
+</head>
+<body>
+
+
+
+    
+    
+    <div class="student-total">
+      <div class="order">
+        <label for="next-1"></label>
+        <label for="next-2"></label>
+        <label for="next-3"></label>
+      </div>
+      <div class="student">
+        <ul class="student-item">
+            <input type="radio" id="next-1" name="next">
+            <input type="radio" id="next-2" name="next">
+            <input type="radio" id="next-3" name="next">
+          <li class="student-pic student-pic-1"><img src="https://picsum.photos/300/200/?random=10"></li>
+          <li class="student-pic student-pic-2"><img src="https://picsum.photos/300/200/?random=11"></li>
+          <li class="student-pic student-pic-3"><img src="https://picsum.photos/300/200/?random=12"></li>
+        </ul>
+        <div class="student-txt">
+          <div class="student-title">
+            <h2>學員成果</h2>
+          </div>
+          <p>攝影到達樂隊如下國產範圍努力此刻說著也有全國，一座上下對付行業天堂實際上不良資源上面你想維持比例市場價，性格真是浪費簽名保險傳統衝突存儲老人可以說來電新技術按鈕，優惠女朋友明顯麻煩打了說過效率，國務院出現頓時尋找生成部門機場有限責任，日常整合，大廈有關等。</p>
+          <div class="student-bth">
+            <a href="#">預約體驗</a>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+</body>
+</html>

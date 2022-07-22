@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+ .menu{
+    width: 100%;
+    display: flex;
+    background-color: #FABB1A;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;  
+}
+.nav{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+}
+.nav li a{
+    width: 120px;
+    padding: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    display: block;
+    font-weight: 900;
+    
+}
+
+.nav li{
+    position: relative;
+}
+.nav li:hover >a{
+    background-color: rgb(140, 14, 14);
+}
+.nav .information{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    text-align: center; 
+    
+}
+.nav li:hover .information{
+    display: block;
+}
+.information li a{
+    display: block; 
+ 
+}
+
+.nav .coach{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    
+}
+.nav li:hover .coach{
+    display: block;
+}
+.nav .article{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    
+}
+.nav li:hover .article{
+    display: block;
+}
+.nav .free{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    
+}
+.nav li:hover .free{
+    display: block;
+}
+.nav .connection{
+    width: 140px;
+    position: absolute;
+    top: 100%;
+    background-color: #090909;
+    display: none;
+    
+}
+.nav li:hover .connection{
+    display: block;
+}
+.logo-pic{
+    text-align: center;
+    width: 160px;
+    height: 110px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 0;
+    right: 80%;
+    z-index: 10;
+    position: fixed;
+    
+    
+}
+.logo-pic img{
+    padding-bottom: 20px;
+}
+.logo-pic::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom:30px solid transparent;
+    border-right: 80px solid aliceblue;
+    border-left:80px solid aliceblue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+} 
+
+
+
+        /* ===================================選單 */
+        body{
+            background: url("https://www.bookfastpos.com/wp-content/uploads/2021/04/1_7C1W1sv96IgQi4vX6mIbRA.jpeg")top left /100% 100%;
+        }
+        .free-total{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 150px 0 100px;
+        }
+        .free{
+            width: 600px;
+            display: flex;
+            
+            flex-direction: column;          
+        } 
+    
+        .free-title h2{
+            font-size: 37px;
+            margin-bottom: 20px;
+            font-weight: 900;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+            color: white;
+        }  
+        .free-post{
+            border: 1px solid black;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.522)
+        }
+        .free-post p{
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 10px;
+            color:white;
+        
+        }
+        .free-post strong{
+            font-size: 25px;
+            color: orange;
+            padding: 10px;
+        }
+        /* ==============================================前言 */
+        
+        .int{
+          margin-bottom: 20px;
+        }
+        .login{
+            width: 450px;
+            border: 1px solid black;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.661)
+            
+        }
+        form{
+            /* width: 300px; */
+            display: flex;
+            flex-direction: column;
+            }
+        #int{
+            padding: 10px;
+            margin: 10px;
+        }
+        .login-input label{
+            font-size: 20px;
+            padding: 10px;
+            line-height: 2;
+            color: white
+        }
+        .login-title{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .login-title h1{
+            color: white;
+            font-size: 40px;
+            padding: 10px;
+            border-bottom: 2px solid white;
+        }
+        form .btn{
+            padding: 10px;
+            color: aliceblue;
+            background-color: crimson;
+            border: 5px double white;
+        }
+        form .convenient{
+            text-align: center;
+            padding: 10px 0;
+        }
+  /* ========================================footer */
+  .footer-total{
+    display: flex;
+    
+    background-color: black;
+}
+.footer{
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color: aliceblue;
+    padding: 20px;
+    margin: auto;
+}
+.footer .footer-pic{
+    display: flex;
+    justify-content: flex-start;
+    width: 300px;
+}
+.footer .footer-about{
+    width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+}
+.footer-about ul{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.footer-about li{
+    display: inline-block;
+    margin: 10px 0;
+}
+.footer-about ul{
+    text-align: center;
+}
+.footer-about ul p{
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px;
+    margin: 10px;
+}
+.footer-about ul a{
+    text-decoration: none;
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+.footer-about ul a:hover{
+    color: red;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color:black; 
+    flex-direction: column;
+    padding-top: 20px;
+}
+.app{
+    border-top: 2px solid white;
+    background-color: black;
+}
+.app-pic img{
+    margin: 5px 10px;
+}
+.app-adress{
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+ /* =============================================copy      */
+ .copy{
+   
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 80px 0;
+    color: aliceblue;  
+    font-size: 20px;
+}
+/* ========================================copy-rigtt -->    */
+.advertise{
+    width: 40px;
+    /* background-color: black; */
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 10;
+    padding: 10px 5px;
+    
+}
+.advertise img{
+   margin: 10px 0;  
+}
+    </style>
+</head>
+<body>
+    <section class="menu-total">
+        <div class="menu">
+          <ul class="nav">
+            <li><a href="#">關於我們</a></li>
+            <li  class="new"><a href="#">最新消息</a>
+            <ul class="information">
+              <li><a href="new.html">購課優惠</a></li>
+              <li><a href="new.html">最新活動</a></li>
+              <li><a href="new.html">挑戰活動</a></li>
+            </ul></li>
+            <li><a href="#">私人教練</a>
+            <ul class="coach">
+              <li><a href="#">課程介紹</a></li>
+              <li><a href="#">會員成果</a></li>
+              <li><a href="coach.html">教練介紹</a></li>
+            </ul></li>
+            <li><a href="#">場館介紹</a>
+            <ul class="article">
+              <li><a href="venue.html">自由重量區</a></li>
+              <li><a href="venue.html">機械式訓練區</a></li>
+              <li><a href="venue.html">有氧教室</a></li>
+              <li><a href="venue.html">瑜珈教室</a></li>
+            </ul></li>
+            <li><a href="#">免費體驗</a>
+            <ul class="free">
+              <li><a href="free.html">馬上體驗</a></li>
+              <li><a href="#">了解內容</a></li>
+              <li><a href="#">會員須知</a></li>
+            </ul></li>
+            <li><a href="#">聯絡我們</a>
+            <ul class="connection">
+              <li><a href="#">聯絡資訊</a></li>
+              <li><a href="#">特約廠商</a></li>
+              <li><a href="#">常見問題</a></li>
+            </ul></li>
+            <li><a href="#">TDEE計算機</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="logo">
+        <div class="logo-pic">
+            <a href="首頁複製.html"><img src="照片/商標100.png" alt="" width="150" height="130"></a>
+        </div>
+      </div>
+<!-- ===========================================選單 -->
+    <section class="free-total">
+        <div class="free">
+            <div class="free-title">
+                <h2>您的健康
+                    是我們唯一在乎的事</h2>
+            </div>
+            <div class="free-post">
+                <div class="post-fist">
+                    <h3></h3><strong>科學化一對一課程</h3></strong>
+                    <p> 客製化課程，以科學為主、降低傷害風險，
+                    讓你有效達到體態目標，減少時間浪費。
+                    屏除單調制式的重複訓練，提高你身體強韌的功能性。
+                    </p>
+                </div>
+                <div class="post-fist">
+                    <h3></h3><strong>美國頂級生物力學訓練器材</h3></strong>
+                        <p>Cxbex / Lifefitness頂級訓練器材，
+                            符合生物力學結構，讓每一寸肌肉都動的有感。
+                        </p>
+                    </div>
+                    <div class="post-fist">
+                        <h3></h3><strong>智能化場館</h3></strong>
+                        <p>智能化服務，一支手機開啟健康生活。
+                        </p>
+                    </div>
+                </div>   
+             </div>
+         <div class="login">
+                <div class="login-title">
+                    <h1>馬上預約體驗</h1>
+                </div>
+                <div class="login-input">
+                    <form action="">
+                        <div class="sex">
+                        <label for="gender">性別:</label>
+                        <label for="gender">男</label>
+                        <input type="radio" name="gender">
+                        <label for="gender">女</label>
+                        <input type="radio" name="gender">
+                    </div>
+                        <input type="text" id="int" placeholder="姓名">
+                        <!-- <input type="text" id="int" placeholder="性別"> -->
+                        <input type="email" id="int" placeholder="email">
+                        <input type="text" id="int" placeholder="聯絡方式">
+                        <div class="convenient">
+                            <label for="check">方便聯繫時段:</label>
+                            <input type="checkbox" id="convenient">
+                            <label for="check">早上</label>
+                            <input type="checkbox" id="convenient">
+                            <label for="check">下午</label>
+                            <input type="checkbox" id="convenient">
+                            <label for="check">晚上</label>
+                        </div>
+                        <button class="btn">送出</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- 
+    ========================footer -->
+    <section class="footer-total">
+        <div class="footer">
+          <div class="footer-pic">
+            <img src="照片/商標100.png" alt="" width="350">
+          </div>
+          <div class="footer-about">
+            <nav>
+              <ul>
+                <li><p>關於我們</p></li>
+                <li> <a href="#">創立宗旨</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul>
+                <li><p>最新消息</p></li>
+                <li> <a href="#">活動優惠</a></li>
+                <li> <a href="#">媒體報導</a></li>
+                <li> <a href="#">活動花絮</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul>
+                <li><p>私人教練</p></li>
+                <li> <a href="#">教練課程介紹</a></li>
+                <li> <a href="#">會員成果</a></li>
+                <li> <a href="#">最新器材</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul>
+                <li><p>專業文章</p></li>
+                <li> <a href="#">飲食研究</a></li>
+                <li> <a href="#">健身常識</a></li>
+                <li> <a href="#">心肺研究</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul>
+                <li><p>免費體驗</p></li>
+                <li> <a href="#">馬上體驗</a></li>
+                <li> <a href="#">了解內容</a></li>
+                <li> <a href="#">會員須知</a></li>
+                <li> <a href="#">企業方案</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul>
+                <li><p>聯絡我們</p></li>
+                <li> <a href="#">聯絡資訊</a></li>
+                <li> <a href="#">特約廠商</a></li>
+                <li> <a href="#">常見問題</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul>
+                <li><p>TDEE計算機</p></li>
+                <li> <a href="#">計算TDEE</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+       </section>
+       <!-- =================================copy
+     -->
+     <div class="app">
+        <div class="app-adress">
+          <p>桃園市桃園區力行路622號</p>
+        </div>
+          <div class="app-pic">
+          <img src="照片/instagram.png" alt="" width="30" height="30">
+          <img src="照片/facebook.png" alt="" width="30" height="30">
+          <img src="照片/line.png" alt="" width="30" height="30">
+          </div>
+     <div class="copy">
+        <p>Copyright ©2022 巨星體能工作室</p>
+      </div>
+
+    
+         <!-- ========================================copy-rigtt -->   
+      <div class="advertise">
+        <img src="照片/101.png" alt="" width="30" height="30">
+        <img src="照片/100.png" alt="" width="30" height="30">
+        <img src="照片/102.png" alt="" width="30" height="30">
+      </div>
+    
+
+</body>
+</html>

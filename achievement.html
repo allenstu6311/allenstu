@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .achievement-title{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* max-width:100%; */
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            background-color: brown;
+            box-sizing: border-box;
+        }
+        .achievement-title h1{
+            font-size: 30px;
+            font-weight: 900;
+            color: aliceblue;
+        }
+        .achievement{
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 140px;
+            animation: move 1s;
+        }
+        @keyframes move{
+            from{transform: rotate(45deg);}
+            top{transform: rotate(0);}
+        }
+        .achievement-left{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .achievement-right{
+            display: flex;
+            justify-content: flex-end;
+        }
+    
+        .achievement-card{
+            display: flex;
+            margin-bottom:70px;
+        }
+        .achievement-pic{
+            width: 450px;
+            position: relative;
+            
+        }
+        .achievement-pic:before{
+            content: "";
+            width: 400px;
+            height: 400px;
+            background-color: rgba(249, 185, 66, 0.665);
+            position: absolute;
+            top:-20%;
+            left:10%;
+            z-index: -1;
+            transform: rotate(45deg);
+        }
+        .achievement-pic img{
+            width: 100%;
+            z-index: 3;
+        }
+        .achievement-txt{
+            width: 400px;
+            padding: 20px;
+        }
+        .achievement-txt h3{
+            font-size: 30px;
+        }
+        .achievement-txt p{
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 10px;
+        }
+        .achievement-btn{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .achievement-btn a{
+            text-decoration: none;
+            color: aliceblue;
+            background-color: brown;
+            padding: 10px;
+            display: block;
+        }
+        .logo{
+            position: fixed;
+            top: 10%;
+            right: 0;
+            opacity: .2;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section class="achievement-total">
+        <div class="achievement-title">
+            <h1>學員成果</h1>
+        </div>
+        <div class="achievement">
+            <div class="achievement-left">
+                <div class="achievement-card">
+                    <div class="achievement-pic">
+                        <img src="https://hypercore.com.tw/static/uploadfiles/change/2fe85556-38e4-4662-b5cf-b30bd816a832/change.jpg">
+                    </div>
+                    <div class="achievement-txt">
+                        <h3>不喜歡運動的我，漸漸愛上運動！</h3>
+                        <p>剛開始主要是張力控制、各個肌群的喚醒＆連結，
+                            然後再加入各式各樣的旋轉動作讓訓練變得更有趣，
+                            不再只是以往自己做固定式器材單調的拿起放下，而是更全面的身體連貫！
+                            在改變了訓練方式之後，肌肉量雖然暫時減少了，但身體越來越靈活。</p>
+                        <div class="achievement-btn">
+                            <a href="#">立即預約諮詢</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-right">
+                <div class="achievement-card">
+                    <div class="achievement-pic">
+                        <img src="https://hypercore.com.tw/static/uploadfiles/change/4912fd0d-2a3b-4515-a579-6556a0f6daed/change.jpg">
+                    </div>
+                    <div class="achievement-txt">
+                        <h3>教練是讓我能夠安全訓練並進步的夥伴！</h3>
+                        <p>一週固定報到 4 天，我只能說專業的教練很重要！
+                            知道妳的問題在哪適度幫妳做調整而不是逼迫感，讓我訓練起來很舒服很有趣，
+                            如今已經上了 6 個多月時間了，出乎我意料之中~我的體態改變了很多，
+                            我駝背圓肩也矯正回來了！慢慢愛上運動了！</p>
+                        <div class="achievement-btn">
+                            <a href="#">立即預約諮詢</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-pic">
+                    <img src="https://hypercore.com.tw/static/uploadfiles/change/351e05ea-cfe2-4629-b8b8-e82d53df4482/change.jpg">
+                </div>
+                <div class="achievement-txt">
+                    <h3>喜歡爬山，為了增強體力開始健身生活！</h3>
+                    <p>一路從諮詢、上課訓練、到現在，任何一刻都是舒服自在，而且非常快樂！
+                        當初在還沒踏進健身房前，總會想很多擔心很多害怕尷尬等等，由Erica教練帶我接觸健身之後，
+                        完全是放心的！而和Erica教練相處下來，不僅是教練與學生，更像是朋友之間最自然的互動。</p>
+                    <div class="achievement-btn">
+                        <a href="#">立即預約諮詢</a>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-right">
+                <div class="achievement-card">
+                    <div class="achievement-pic">
+                        <img src="https://hypercore.com.tw/static/uploadfiles/change/2e6a0185-b593-461d-aab9-f4fa0047879d/change.jpg">
+                    </div>
+                    <div class="achievement-txt">
+                        <h3>唯一該做的，就是「贏過昨天的自己。」</h3>
+                        <p>這段過程中所吸收到的知識及動作的指導，更打破以前自己認為的認知，讓我對健身更是充滿了熱忱及興趣！不像之前總是在網路上光看動作，也不知道自己操作是否正確？在超核心 Sam 教練指導之下，讓我對動作更有信心！</p>
+                        <div class="achievement-btn">
+                            <a href="#">立即預約諮詢</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="logo">
+        <img src="商標100.png" alt="">
+    </div>
+
+
+</body>
+</html>
